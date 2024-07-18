@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require('UUIDGenerator.php');
 function SignUpUser($name, $email, $password){
     $uuid = generateUUID();
@@ -33,7 +33,7 @@ function SignUpUser($name, $email, $password){
 
 function LogdinUser($email, $passworD) {
      include('conn.php');
-   
+
    $sql = "SELECT * FROM USERS WHERE email = '$email'";
     $result = mysqli_query($conn, $sql);
     if ($result && mysqli_num_rows($result) > 0) {
@@ -58,7 +58,7 @@ function LogdinUser($email, $passworD) {
             exit();
         }
     }else{
-        echo "wrong";
+        $_SESSION['error'] = "user not fount";
     }
 
    exit();

@@ -3,7 +3,7 @@
 
  function saveReview($product_id, $rating, $comment){
      include('conn.php');
-     $review_id = generateUUID();
+    $review_id = generateUUID();
     $user_id = $_SESSION['userid'];
     $uname = $_SESSION['user'];
     try {
@@ -12,13 +12,13 @@
             mysqli_stmt_bind_param($stmt, "sssiss", $review_id, $product_id,$user_id, $rating, $comment, $uname );
         if ($stmt) {
             if (mysqli_stmt_execute($stmt)) {
-                $_SESSION['success'] = "Comment submitted successfully.";
                   $_SESSION['success'] = "Review submitted successfully";
-                header('Location: ../product/show.php?product_id=' .$product_id);
-                exit();  
+                header('Location: ../product/show.php?product_id=' . $product_id);
+
+
             } else {
                 $_SESSION['error'] = "Error occurred during execution: " . mysqli_error($conn);
-                  header('Location: ../product/show.php?product_id=' .$product_id);
+                header('Location: ../product/show.php?product_id=' . $product_id);
             }
             mysqli_stmt_close($stmt);
         } else {
@@ -29,7 +29,7 @@
         $_SESSION['error'] = $e->getMessage();
          $_SESSION['error'] = "Error occurred during execution: " . mysqli_error($conn);
     }
-     return;
+     
   }
 function GetReview($pid)
 {

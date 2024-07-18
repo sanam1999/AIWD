@@ -2,7 +2,7 @@
 <div class="f">
 <?php
 
-session_start();
+
 if ($_SESSION['error']) {
 
     echo '<div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
@@ -19,7 +19,7 @@ if ($_SESSION['success']) {
     echo $_SESSION['success'];
     unset($_SESSION['success']); 
     echo '</strong > 
-     <a href="'.$_SERVER['PHP_SELF'].'"> <i class="flashclose fa-solid fa-xmark"></i></a>
+     <a href="' . $_SERVER['PHP_SELF'] . '"> <i class="flashclose fa-solid fa-xmark">h</i></a>
     </div>';
 }
 ?>

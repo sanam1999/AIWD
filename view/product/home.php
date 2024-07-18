@@ -2,12 +2,8 @@
 include ('../include/header.php');
 require ('../midellware.php');
 require ('../../model/product.php');
-session_start();
- if(!isAuthenticate()){
-    $_SESSION['error'] = "You must be logged In";
-   header('Location: login.php ');
-   return;
- }
+
+isAuthenticate();
  
 ?>
 <section class="home">
@@ -40,6 +36,6 @@ session_start();
         }
         echo '</div>';
     }
- 
+   
 include('../include/footer.php');
 ?>

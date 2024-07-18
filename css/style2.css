@@ -1,0 +1,184 @@
+.return {
+    color: white;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.payment,
+.otp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    display: none;
+}
+
+.paymentProsess,
+.invoice-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.paymentProsess {
+    width: 850px;
+    background-color: pink;
+}
+
+.paymentProsess p,
+.paymentProsess .adreass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black 1px;
+    padding: 0px 10px;
+    height: 3rem;
+}
+
+.invoice-form {
+    width: 350px;
+}
+
+.invoice-form h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: calc(100% - 24px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#security-code {
+    width: calc(100% - 44px);
+    display: inline-block;
+}
+
+.info-icon {
+    display: inline-block;
+    margin-left: 4px;
+    background: #ccc;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.book {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.book:hover {
+    background: #0056b3;
+}
+
+.margintop-1 {
+    margin-top: 1rem;
+
+}
+
+.margintop-0-5 {
+    margin-top: 0.5rem;
+}
+
+.odercard {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 50rem;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.odercard img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.odercard .status {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    left: 19rem;
+
+    width: 100%;
+}
+
+.odercard .status p {
+    color: #ba6f58;
+    text-align: end;
+}
+
+.odercard-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.odercard-content h3 {
+    margin: 0;
+}
+
+.odercard-content p {
+    margin: 8px 0;
+}
+
+.odercard-content button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    width: 10rem;
+}
+
+.odercard-content button:hover {
+    background-color: #ff6565;
+}
+
+.f {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#profilepic {
+    height: 30px;
+}
+
+.sidebar-item:hover {
+    background-color: #485769;
+    color: rgb(255, 129, 129);
+}

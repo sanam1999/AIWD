@@ -180,8 +180,7 @@ screen and (min-resolution: 192dpi) {
     .starability-slot .input-no-rate {
         display: none;
     }
-
-    .starability-slot>label {
+   .starability-slot>label {
         display: inline;
         float: none;
         width: auto;

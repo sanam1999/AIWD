@@ -1,5 +1,5 @@
 <?php
-//include ('../include/header.php');
+include ('../include/header.php');
 require ('../../model/user.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -43,5 +43,5 @@ SignUpUser($name, $email, $password);
 </div>
 
 <?php
-//include ('../include/footer.php');
+include ('../include/footer.php');
  

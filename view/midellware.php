@@ -1,11 +1,10 @@
 <?php
-session_start();
-
 function isAuthenticate() {
-    if (isset($_SESSION['login']) && $_SESSION['login'] === true) {
-        return true;
+    if (isset($_SESSION['login']) && $_SESSION['login'] !== true) {
+        $_SESSION['error'] = "You must be logged In";
+        header('Location: ../user/login.php ');
+        exit;
     }
-    return false;
 }
 
 

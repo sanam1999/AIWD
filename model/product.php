@@ -20,7 +20,7 @@ function fetchProductsAsObjects() {
             $product->stock = $row['stock'];
             $product->condition = $row['condition'];
             $product->created_at = $row['created_at'];
-            $product->updated_at = $row['updated_at'];
+
             $product->imageurl = $row['imageUrl'];
             
             $products[] = $product;
@@ -53,7 +53,6 @@ function fetchSingleProduct($id) {
         $product->stock = $row['stock'];
         $product->condition = $row['condition'];
         $product->created_at = $row['created_at'];
-        $product->updated_at = $row['updated_at'];
         $product->imageurl = $row['imageUrl'];
         
 
@@ -86,7 +85,7 @@ function fetchRelatedProducts($category, $type) {
             $product->stock = $row['stock'];
             $product->condition = $row['condition'];
             $product->created_at = $row['created_at'];
-            $product->updated_at = $row['updated_at'];
+
             $product->imageurl = $row['imageUrl'];
             $RProducts[] = $product;
         }

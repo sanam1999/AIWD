@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../../css/style2.css">
 
-   
+ 
 
 </head>
 
 
 <header>
+    <?php
+    session_start();
+    ?>
     <div class="navbar">
         <div class="nav border">
             <a href="amazon.html">
@@ -39,17 +43,23 @@
                 <p class="same2">Account & Lists</p>
             </span>
             <div class="option">
-                <a href="#">SignIn</a>
-                <a href="#">Login</a>
-                <a href="#">Logout</a>
+                <?php if ($_SESSION['login'] == true && isset($_SESSION['login'])): ?>
+                    <a href="../user/logout.php">Logout</a>
+                    <a href="../user/profile.php">Profile</a>
+                <?php else: ?>
+                    <a href="../user/SingUp.php">SignIn</a>
+                    <a href="../user/login.php">Login</a>
+                <?php endif ?>
             </div>
         </div>
 
 
-        <div class="return border">
-            <p><samp class="same1">Return</samp></p>
-            <p class="same2">& Orders</p>
-        </div>
+        <a href="../product/oders.php" class="return border">
+    <div>
+        <p class="same1">Return</p>
+        <p class="same2">& Orders</p>
+    </div>
+</a>
 
         <div class="card border">
             <i class="fa-solid fa-cart-shopping fa-beat"></i>
@@ -62,7 +72,7 @@
 
     <div class="filters">
         <i class="fa-solid toggleButton border fa-bars"></i>
-        <a class="filter border border" href="/listings">
+        <a class="filter  border" href="/final">
             <div><i class="fa-solid fa-fire"></i></div>
             <p>Trending</p>
         </a>
@@ -115,14 +125,31 @@
 
 
 <div id="sidebar" class="sidebar oc">
-    <a href="#" class="sidebar-item oc">Home</a>
-    <a href="#" class="sidebar-item oc">About</a>
-    <a href="#" class="sidebar-item oc">Services</a>
-    <a href="#" class="sidebar-item oc">Contact</a>
+<?php if ($_SESSION['login'] == true && isset($_SESSION['login'])): ?>
+    <a class="sidebar-item oc" href="../user/logout.php"><i class="fa-solid fa-user"></i>
+        <?php echo $_SESSION['user']; ?></a>
+<?php endif ?>
+<a href="../product/home.php" class="sidebar-item oc"> <i class="fa-solid fa-house"></i> Home</a>
+<a href="#" class="sidebar-item oc"> <i class="fa-solid fa-handshake-angle"></i> Help</a>
+<a href="#" class="sidebar-item oc"> <i class="fa-solid fa-cart-shopping"></i> Orders</a>
+<a href="#" class="sidebar-item oc"> <i class="fa-solid fa-bookmark"></i> Card</a>
+<a href="#" class="sidebar-item oc"> Contact</a>
+<a href="#" class="sidebar-item oc"> Contact</a>
+<a href="#" class="sidebar-item oc"> Contact</a>
+<a href="#" class="sidebar-item oc"> Contact</a>
+<a href="#" class="sidebar-item oc"> Contact</a>
+<a href="#" class="sidebar-item oc"> Contact</a>
+
 </div>
 
+<?php
+include ("flassmsg.php");
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 
-<?php include("flassmsg.php")?>
+
+?>
 <body>
     <main class="main-content">
 
